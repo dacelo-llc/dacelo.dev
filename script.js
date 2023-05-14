@@ -14,7 +14,7 @@ greet('World');
             language: 'Python',
             code: `
 def greet(name):
-    print(f'Hello, {World}!')
+    print(f'Hello, {name}!')
 
 greet('World')
             `
