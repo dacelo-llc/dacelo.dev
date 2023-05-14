@@ -1,0 +1,80 @@
+html,
+body {
+  background-color: rgb(10, 10, 15);
+  color: rgb(220, 220, 225);
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.blob {
+  z-index: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 80vh;
+  width: 20vw;
+  border-radius: 100% 40% 100% 40%;
+  background: linear-gradient(rgb(12, 175, 240), rgb(139, 21, 250));
+  transform: translate(-50%, -50%);
+  animation: spin 20s linear infinite;
+}
+
+.blur {
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  backdrop-filter: blur(200px);
+}
+
+.centered-message {
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgb(180, 180, 185);
+  padding: 10px 25px;
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+}
+
+.centered-message:hover {
+  box-shadow: 8px 10px 2px 2px rgba(0, 0, 0, 0.4);
+  transform: translate(-12px, -12px) translate(-50%, -50%);
+}
+
+#currentPageName {
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+    padding: 2px 15px;
+    color: rgb(220, 220, 225);
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: left;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.hljs {
+    background-color: rgba(0, 0, 0, 0.4);
+}

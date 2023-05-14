@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Duh oh! 404</title>
+        <meta name="description" content="Hello, World!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark-reasonable.min.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="blob"></div>
+        <div class="blur"></div>
+        <div class="centered-message">
+            <p><strong>Duh Oh!</strong> Nothing was found at this address! (404)</p>
+            <p>You are on the page: <strong id="currentPageName"></strong></p>
+            <p>While you're here, enjoy this Kookaburra!</p>
+            <img src="kookaburra.gif" style="border-radius: 5px; border: 1px solid white;" />
+        </div>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                var currentPageUri = new URL(window.location.href);
+
+                var currentPageName = "";
+                if (currentPageUri.pathname.length > 0) {
+                    currentPageName = currentPageUri.pathname;
+                }
+
+                document.getElementById('currentPageName').innerText = currentPageName;
+            });
+        </script>
+    </body>
+</html>
